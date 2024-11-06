@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            font-weight: bold;
+            color: green;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-style: italic;
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+        <div class="paragrafos">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Eaque, officia quo et error nisi nostrum modi dolorum dolores deleniti </p>
+            <p>numquam laborum esse! Non expedita corrupti quia rem itaque nobis accusamus.</p>
+        </div>
+    </section>
+    <script>
+        const paragrafos = document.querySelectorAll(".paragrafos p");
+        const h1 = document.querySelector("h1");
+
+        const estilosH1 = getComputedStyle(h1);
+
+        const fontFamily  = estilosH1.fontFamily;
+        const fontWeight = estilosH1.fontWeight;
+        const fontStyle = estilosH1.fontStyle;
+        const color = estilosH1.color;
+
+        for (const frases of paragrafos) {
+            frases.style.color = color;
+            frases.style.fontFamily = fontFamily;
+            frases.style.fontWeight = fontWeight;
+            frases.style.fontStyle = fontStyle;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- <script>
+        // O motor do JS procura os métodos primeiro no construtor, depois no prototype
+        function Pessoa(nome, idade, sobrenome) {
+            this.nome = nome;
+            this.idade = idade;
+            this.sobrenome = sobrenome;
+
+            this.getNome = () => nome + " " + sobrenome;
+        }
+
+        Pessoa.prototype.nom = "JOFD";
+
+        const p1 = new Pessoa("Daniel", 23, "Felipe");
+
+        // console.dir(p1);
+        
+        function configProto(obj){
+            Object.defineProperty(obj, 'chaveA', {
+                writable: false,
+                configurable: false,
+                value: "Abacaxi"
+            });
+        }
+
+        const objA = {
+            chaveA : "Letra A"
+        };
+
+        const objB = {
+            chaveB : "Letra B"
+        };
+
+        configProto(objA);
+        console.dir(Object.getOwnPropertyDescriptors(objA))
+
+        Object.setPrototypeOf(objB, objA);
+
+    </script> -->
+    <script src="./5_prototypes.js"></script>
+</body>
+
+</html>

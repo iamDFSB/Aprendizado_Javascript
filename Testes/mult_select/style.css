@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    list-style: none;
+}
+
+.select_all{
+    background-color: aqua;
+    width: 100%;
+}
+
+ul.my_data{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: .5rem;
+    justify-items: center;
+}
+
+ul.my_data li{
+    background-color: aliceblue;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 10px;
+    text-wrap: nowrap;
+}
+
+.tela{
+    background-color: bisque;
+    width: 100%;
+    height: 40px;
+    overflow: auto;
+    padding: .5rem 0;
+}
+
+summary{
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.options{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}

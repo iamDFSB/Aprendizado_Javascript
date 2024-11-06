@@ -1,0 +1,128 @@
+.sidebar {
+    position: fixed; /* Alterei para fixed para garantir que ele permaneça visível ao rolar a página */
+    top: 0;
+    left: -400px;
+    height: 100vh; /* Altura igual à altura da viewport */
+    display: flex;
+    align-items: stretch;
+    width: 400px;
+    padding: 10px;
+    background-color: rgb(234, 231, 227);
+    transition: all 300ms ease-in-out;
+    z-index: 1;
+}
+
+.sidebar .links{
+    margin-bottom: 10rem;
+}
+
+.sidebar .toggle-btn{
+    position: absolute;
+    top: 10px;
+    right: -40px;
+    width: 37px;
+    height: 35px;
+    
+}
+
+.sidebar .toggle-btn:hover{
+    cursor: pointer;
+}
+
+.sidebar:not(.active) .toggle-btn {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    padding: 8px;
+    border-radius: 5px;
+    justify-content: center;
+}
+
+.sidebar .toggle-btn span{
+    position: absolute;
+    width: 90%;
+    left: 2px;
+    height: 2px;
+    background-color: #ffffff;
+    transform: translateY(-50%);
+}
+
+.sidebar .toggle-btn span:nth-child(1){
+    top: 20%;
+}
+.sidebar .toggle-btn span:nth-child(2){
+    top: 50%;
+}
+.sidebar .toggle-btn span:nth-child(3){
+    top: 80%;
+}
+
+.sidebar.active{
+    left: 0px;
+}
+
+.sidebar.active .toggle-btn span{
+    background-color: black;
+    left: 5rem;
+}
+
+.sidebar.active .toggle-btn span:nth-child(1){
+    top: 50%;
+    left: -5rem;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.sidebar.active .toggle-btn span:nth-child(2){
+    display: none;
+}
+
+.sidebar.active .toggle-btn span:nth-child(3){
+    top: 50%;
+    left: -5rem;
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+#div_filtrar .btn.btn-light, 
+#filtros_incub .btn.btn-light,
+.div_seller_type input,
+.div_adgmv input,
+.div_unique_id_hunting input{
+    width: 150px;
+}
+
+#div_filtrar,
+#filtros_incub{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: .5rem;
+    text-align: center;
+}
+
+#slct_adgmv,
+#slct_unique_id_hunting,
+#slct_unique_id_incub{
+    font-size: small;
+}
+
+.content_select{
+    width: 100%;
+    height: 130px;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    margin-top: 1rem;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: .5rem;
+    padding: 5px 0;
+    align-items: start;
+}
+
+div.content_select > div.bloco_content_select{
+    background-color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: .5rem;
+}
+

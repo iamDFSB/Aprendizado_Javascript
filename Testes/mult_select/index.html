@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select with Checkboxes</title>
+    <style>
+        /* Estilos para o select customizado */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .multiselect {
+            position: relative;
+            width: 100%;
+        }
+
+        .selectBox {
+            position: relative;
+        }
+
+        .selectBox select {
+            width: 100%;
+            font-weight: bold;
+        }
+
+        .overSelect {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            cursor: pointer;
+        }
+
+        .checkboxes {
+            display: none;
+            position: absolute;
+            background-color: white;
+            border: 1px solid #dadada;
+            z-index: 1;
+            width: 100%;
+            max-height: 150px;
+            overflow-y: auto;
+        }
+
+        .checkboxes label {
+            display: block;
+            padding: 5px;
+        }
+
+        .checkboxes label:hover {
+            background-color: #1e90ff;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="multiselect">
+            <div class="selectBox" onclick="showCheckboxes(this)">
+                <select>
+                    <option>Selecione uma opção</option>
+                </select>
+                <div class="overSelect"></div>
+            </div>
+            <div class="checkboxes">
+                <label for="one">
+                    <input type="checkbox" id="one" />Opção 1</label>
+                <label for="two">
+                    <input type="checkbox" id="two" />Opção 2</label>
+                <label for="three">
+                    <input type="checkbox" id="three" />Opção 3</label>
+            </div>
+        </div>
+
+        <div class="multiselect">
+            <div class="selectBox" onclick="showCheckboxes(this)">
+                <select>
+                    <option>Selecione uma opção</option>
+                </select>
+                <div class="overSelect"></div>
+            </div>
+            <div class="checkboxes">
+                <label for="four">
+                    <input type="checkbox" id="four" />Opção 4</label>
+                <label for="five">
+                    <input type="checkbox" id="five" />Opção 5</label>
+                <label for="six">
+                    <input type="checkbox" id="six" />Opção 6</label>
+            </div>
+        </div>
+
+        <!-- Adicione mais selects conforme necessário -->
+    </div>
+
+    <script>
+        /* Script para mostrar/esconder os checkboxes */
+        var expanded = false;
+
+        function showCheckboxes(element) {
+            var checkboxes = element.nextElementSibling;
+            if (!expanded) {
+                hideAllCheckboxes();
+                checkboxes.style.display = "block";
+                expanded = true;
+            } else {
+                checkboxes.style.display = "none";
+                expanded = false;
+            }
+        }
+
+        function hideAllCheckboxes() {
+            var checkboxes = document.querySelectorAll('.checkboxes');
+            checkboxes.forEach(function (checkbox) {
+                checkbox.style.display = "none";
+            });
+            expanded = false;
+        }
+
+        /* Fechar dropdowns ao clicar fora deles */
+        window.onclick = function (event) {
+            if (!event.target.matches('.selectBox, .selectBox *')) {
+                hideAllCheckboxes();
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

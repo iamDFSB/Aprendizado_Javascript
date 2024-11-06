@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customizando Select Group</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="select_all">
+        <div class="text">
+            <p>Select</p>
+        </div>
+    
+        <div class="content">
+            <div class="tela">
+                <ul class="my_data"></ul>
+            </div>
+            <div class="options">
+                <div class="bloco_option">
+                    <input type="checkbox" name="" id="opt_1">
+                    <label for="opt_1">My OPT</label>
+                </div>
+                <div class="bloco_option">
+                    <input type="checkbox" name="" id="opt_2">
+                    <label for="opt_2">Meu nome</label>
+                </div>
+                <div class="bloco_option">
+                    <input type="checkbox" name="" id="opt_2">
+                    <label for="opt_2">Meu nome</label>
+                </div>
+                <div class="bloco_option">
+                    <input type="checkbox" name="" id="opt_2">
+                    <label for="opt_2">Meu nome</label>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <script>
+        const boxes = document.querySelectorAll("div.bloco_option input");
+        const tela = document.querySelector("div.tela ul");
+
+        boxes.forEach((box) => {
+            const li = document.createElement("li");
+            box.addEventListener("click", () => {
+                if (box.checked) {
+                    const nome = box.nextElementSibling.textContent;
+                    li.textContent = nome;
+                    tela.appendChild(li);
+                } else {
+                    tela.removeChild(li)
+                }
+            })
+        })
+
+        const click_text = document.querySelector("div.select_all div.text");
+        const content = document.querySelector("div.select_all div.content");
+
+        click_text.addEventListener("click",()=>{
+            if (content.classList.contains("active")) {
+                content.display = "none";
+            }else{
+                content.display = "block";
+            }
+        })
+    </script>
+</body>
+
+</html>
