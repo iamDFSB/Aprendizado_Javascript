@@ -12,8 +12,14 @@ function Camiseta(nome, preco, cor){
     this.cor = cor;
 }
 
-Camiseta.prototype = Object.create(Produto.prototype);
-Camiseta.prototype.constructor = Camiseta;
+// Formas para definir o prototype na função Camiseta 
+// Forma 1:
+
+// Camiseta.prototype = Object.create(Produto.prototype);
+// Camiseta.prototype.constructor = Camiseta;
+
+// Forma 2:
+Object.setPrototypeOf(Camiseta.prototype, Object.create(Produto.prototype));
 
 const camiseta = new Camiseta('Regata', 7.8, 'Preta');
 

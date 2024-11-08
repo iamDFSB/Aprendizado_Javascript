@@ -9,7 +9,7 @@ function Produto(nome, preco) {
 
 const p1 = new Produto("Camiseta", 34);
 p1.preco = p1.desconto(10);
-console.log(p1);
+// console.log(p1);
 
 const p2 = new Produto("Calça", 300);
 console.log(p2);
@@ -22,7 +22,7 @@ const p3 = Object.create(Produto.prototype);
 p3.nome = "Carro";
 p3.preco = 1000;
 p3.preco = p3.desconto(30);
-console.log(p3);
+// console.log(p3);
 
 
 
