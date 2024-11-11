@@ -18,8 +18,8 @@
 
 // Definindo a propriedades de mais de uma propriedade
 function Produto(nome, preco, estoque){
-    this.nome = nome;
-    this.preco = preco;
+    // this.nome = nome;
+    // this.preco = preco;
     
     Object.defineProperties(this, {
         nome: {
