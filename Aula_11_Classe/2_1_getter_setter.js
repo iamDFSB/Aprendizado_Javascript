@@ -6,11 +6,11 @@ class Carro{
         this._velocidade = 0;
     }
 
-    get getVelocidade() {
+    get velocidade() {
         return this._velocidade;
     }
 
-    set setVelocidade(valor){
+    set velocidade(valor){
         if(typeof valor !== 'number') return;
         if(valor >= 100 || valor <= 0) return;
         this._velocidade = valor;
@@ -32,8 +32,8 @@ class Carro{
 const c1 = new Carro('Fusca');
 console.log(c1)
 console.log(c1._velocidade);
-c1.setVelocidade = 10;
-console.log(c1.getVelocidade);
+c1.velocidade = 10;
+console.log(c1.velocidade);
 
 // for (let index = 0; index <= 1; index++) {
 //     c1.acelerar();

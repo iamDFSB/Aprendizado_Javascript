@@ -4,7 +4,8 @@ class Carro{
         let velo = 0;
         // Crio uma variavel privada
         Object.defineProperty(this, 'velocidade', {
-            enumerable: true,
+            configurable: false,
+            enumerable: false,
             get: function (){
                 return velo;
             },
