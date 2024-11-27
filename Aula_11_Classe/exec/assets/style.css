@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main{
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+input {
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+button {
+    padding: 5px;
+    border-radius: 10px;
+    border: .5px solid gray;
+    background-color: rgb(232, 232, 232);
+
+}
+
+button:hover {
+    background-color: gray;
+    cursor: pointer;
+}
+
+input.danger{
+    border: 2px solid red;
+}
+
+
+label{
+    display: flex;
+    flex-direction: column;
+    
+}
