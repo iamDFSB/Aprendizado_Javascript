@@ -1,0 +1,38 @@
+[
+    {
+        "nome": "Daniel",
+        "idade": 23,
+        "sexo": "M",
+        "cpf": "234.245.243-45"
+    },
+    {
+        "nome": "Maria Fernanda",
+        "idade": 29,
+        "sexo": "F",
+        "cpf": "123.456.789-00"
+    },
+    {
+        "nome": "João Pedro",
+        "idade": 35,
+        "sexo": "M",
+        "cpf": "987.654.321-11"
+    },
+    {
+        "nome": "Ana Clara",
+        "idade": 27,
+        "sexo": "F",
+        "cpf": "456.123.789-22"
+    },
+    {
+        "nome": "Lucas Silva",
+        "idade": 41,
+        "sexo": "M",
+        "cpf": "321.987.654-33"
+    },
+    {
+        "nome": "Gabriela Souza",
+        "idade": 31,
+        "sexo": "F",
+        "cpf": "789.456.123-44"
+    }
+]
