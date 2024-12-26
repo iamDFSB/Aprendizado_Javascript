@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+.cpf-gerado{
+    display: flex;
+    width: 400px;
+    height: 300px;
+    flex-direction: column;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    margin-top: 2rem;
+}
+
+h2 {
+    color: rgb(83, 214, 214);
+    font-weight: bold;
+    
+}
+
+p {
+    color: black;
+    font-size: large;
+}

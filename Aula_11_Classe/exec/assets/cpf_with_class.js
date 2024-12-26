@@ -52,15 +52,7 @@ class ValidaCPF{
 
 }
 
-// const cpf = "705.484.450";
+const cpf = "705.484.450";
 
-// const session = new ValidaCPF(cpf);
-// session.buildEntireCPF()
-
-// const firstNumber = session.createFirstNumber()
-
-// const otherSession = new ValidaCPF((cpf + firstNumber), 11);
-
-// const secondNumber = otherSession.createFirstNumber()
-
-// console.log(`Seu cpf é ${cpf}-${firstNumber}${secondNumber}`)
+const session = new ValidaCPF(cpf);
+console.log(session.buildEntireCPF());
