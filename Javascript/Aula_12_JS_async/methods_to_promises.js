@@ -71,21 +71,23 @@ const promises = [
 
 // Promise.reject -> serve para bloquear o processo e ir direto para o catch:
 
-function downloadPage() {
-    const cache = true;
-    if (cache) {
-        return Promise.reject('Está no cache');
-    } else {
-        return waitingAMessage('Página baixada', randomNumber(1, 3))
+/*
+    function downloadPage() {
+        const cache = true;
+        if (cache) {
+            return Promise.reject('Está no cache');
+        } else {
+            return waitingAMessage('Página baixada', randomNumber(1, 3))
+        }
     }
-}
 
 
-downloadPage()
-    .then((response) => {
-        console.log(response);
-    })
-    .catch((e)=>{
-        throw new Error(e);
-    });
+    downloadPage()
+        .then((response) => {
+            console.log(response);
+        })
+        .catch((e)=>{
+            throw new Error(e);
+        });
 
+*/

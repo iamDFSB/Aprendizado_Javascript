@@ -1,10 +1,11 @@
 // Gerador de Senha
-const {geradorDeSenha} = require('./modules/GeraSenha');
+import {geradorDeSenha} from './modules/GeraSenha.js';
 import './assets/css/style.css';
 
 
 const button = document.querySelector("div.button-submit button");
 const p = document.querySelector("p.senha-value");
+const chac = document.querySelector("input[type='number']");
 const checks = document.querySelectorAll("input[type='checkbox']");
 
 button.addEventListener("click", (e) => {
@@ -12,6 +13,6 @@ button.addEventListener("click", (e) => {
     checks.forEach((input) => {
         dictionary[input.name] = input.checked;
     });
-    const result = geradorDeSenha(10, dictionary);
+    const result = geradorDeSenha(chac.value, dictionary);
     p.textContent = result;
 });
