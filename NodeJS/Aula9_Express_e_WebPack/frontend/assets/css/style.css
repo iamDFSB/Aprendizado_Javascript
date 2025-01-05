@@ -1,0 +1,15 @@
+h1{
+    color: red;
+    background-color:  beige
+}
+
+input {
+    border: none;
+    background-color: antiquewhite;
+    padding: 10px;
+    color: black;
+}
+
+input:focus, input:focus-visible {
+    border: none
+}
